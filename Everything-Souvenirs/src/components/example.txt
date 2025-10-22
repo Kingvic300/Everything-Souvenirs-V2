@@ -1,0 +1,175 @@
+import React from 'react';
+
+const BrandGifts = () => {
+  return (
+    <div className="bg-background-dark font-display min-h-screen">
+      <div className="flex flex-col max-w-[960px] mx-auto">
+        {/* Header */}
+
+        {/* Hero Section */}
+        <main className="flex flex-col gap-10">
+          <div className="min-h-[480px] flex flex-col gap-8 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-4"
+               style={{backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.8) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDxv8bRivBJv2ixFVTSQcuE8yomSmOFKIagiNSfcQEUHRfAz6sX1Bf8IaXQ8q2dM7x76MAx57NNkng1VbWeqkFeYE232m3LwNdgGl57tiEIzXe2t2o7KsZAFKogTYcRcE-mXBe_PqFDvqe5yM6cZnstN5aI2KSazjh-H0BqIJUbCWUKIBlyCAOzwxtKAaGEKYAfoWDL6Vwr4Nu7esgkKiZoch4Glg6934GA6NuhouOBPPyX7JzsYyySQwnYAZ6Sr4__KKJcpFKPOPK-")'}}>
+            <div className="flex flex-col gap-2 text-center max-w-2xl">
+              <h1 className="text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]">
+                Bringing Your Brand to Life — <span className="text-accent-gold">One Gift at a Time</span>
+              </h1>
+              <h2 className="text-white/90 text-sm md:text-base font-normal leading-normal">
+                We create custom branded gifts and promotional items that make a lasting impression. Let us help you elevate your brand with high-quality products and fast turnaround times.
+              </h2>
+            </div>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 md:h-12 px-4 md:px-5 bg-primary text-background-dark text-sm md:text-base font-bold leading-normal tracking-[0.015em] transition-transform duration-200 hover:scale-105">
+                <span className="truncate">Request a Quote</span>
+              </button>
+              <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 md:h-12 px-4 md:px-5 bg-white/10 text-white text-sm md:text-base font-bold leading-normal tracking-[0.015em] transition-transform duration-200 hover:scale-105 hover:bg-white/20">
+                <span className="truncate">Explore Products</span>
+              </button>
+            </div>
+          </div>
+
+          {/* Why Choose Us Section */}
+          <div className="flex flex-col gap-10 px-4 py-10">
+            <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-4">
+                <h2 className="text-white text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em] max-w-[720px]">
+                  Why Choose Us?
+                </h2>
+                <p className="text-white/80 text-base font-normal leading-normal max-w-[720px]">
+                  We are committed to providing you with the best custom branded gifts and promotional items. Here are a few reasons why you should choose us for your next project.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+              {[
+                { icon: "schedule", title: "Fast Turnaround", desc: "Get your custom branded gifts and promotional items in a timely manner." },
+                { icon: "diamond", title: "Premium Materials", desc: "We use only the highest quality materials to ensure that your products are durable and long-lasting." },
+                { icon: "sell", title: "Bulk Discounts", desc: "Save money when you order in bulk. The more you order, the more you save." },
+                { icon: "group", title: "Trusted by Leading Brands", desc: "We have worked with some of the biggest names in the industry. You can trust us to deliver." }
+              ].map((item, index) => (
+                <div key={index} className="flex flex-1 gap-3 rounded-xl border border-white/10 bg-surface-dark p-4 flex-col transition-all duration-300 hover:border-accent-gold/30 hover:shadow-lg">
+                  <span className="material-symbols-outlined text-accent-gold text-3xl">{item.icon}</span>
+                  <div className="flex flex-col gap-1">
+                    <h3 className="text-white text-base font-bold leading-tight">{item.title}</h3>
+                    <p className="text-white/60 text-sm font-normal leading-normal">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Featured Products */}
+          <div className="flex flex-col gap-10 py-10">
+            <div className="flex flex-col gap-6 px-4">
+              <div className="flex flex-col gap-4 text-center items-center">
+                <h2 className="text-white text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em] max-w-[720px]">
+                  Featured Products
+                </h2>
+                <p className="text-white/80 text-base font-normal leading-normal max-w-[720px]">
+                  Discover a selection of our most popular and newly added custom branded gifts, perfect for any occasion.
+                </p>
+              </div>
+            </div>
+
+            <div className="relative w-full">
+              <div className="flex gap-6 overflow-x-auto pb-4 px-4 scroll-snap-x mandatory scroll-behavior-smooth">
+                {[
+                  { img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCktEn_fUW4RFZOcZTtWDcwyOSiNnKiXuEU7C-1-M7r6CPweNs3PE8wpRPHnV-jjQY_8BeHTChrcqVXV9XqgQg4avq6EnJhELN_h8iot20BszsF7-sca5g6sbnTI6vAiryorFQhC5PYlMu4Feo23lPpLMJarJNGkghyyxX5KpWULxMjI6t_6o3kYB1oLM2wfnQlL-LIE-bHX_8CfaRW9Z3QahiRrxFmrk5oRg4J_1NTn--MZ3Hg5dT-_ZA7ipDO6KOBvNZAX9osb5vw", title: "Branded Hydro Flask", desc: "Keep your brand cool with our custom-engraved, insulated water bottles." },
+                  { img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBQoS3JsozkJrCSHjZvJDEOweiK2mNk7C-LiVGuUadLAp-f-zaMU-abrvjw7H8OlBIvOFuZRGTFe4n4gx0YpdrQ5k-xQj_kN5K66pa6atLkPbBQh5W0QQAv5d9l8BYDnghkWBTa11_dgRbgZGEwvj6DW2raAQWoI92GrD7G-sSTnMlbRXbQwBy5GXLR-e3Sdt8el75CfsepvkTS0kl7cdoTZlpvw-XaOPlvjKKNJwz3RZV4oax7KUp_nZ7LgvVmrruUlCBfMTkw8oLF", title: "Eco-Friendly Tote Bag", desc: "Showcase your logo on our durable, 100% recycled cotton tote bags." },
+                  { img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAqUW3j3M4wFotC9aPouTYoM35Nn1L9dVH3Ic8WmTkkbVJ-RkddIR2lG57clOJwThs-e8my0VSqTI1RNGH_UM9yN5hEQKbf8HTqbMyFeSHTI29sGxQ23NkUz1BQANuGdPgwAXxGJ6o2M6PWl-nocQDwyVnZ5KSpmSFGsQRubQO81r-1d736DCA4nLKCM0xa_T6my3z0lV_48GGSVwtYzVp_VeuTk5AIMxn5zEn30n8FtLCS7sL3KmesyC5XAZ4X-HdON4P_WvpFYAUy", title: "Executive Pen Set", desc: "A sophisticated gift, our pens are elegantly designed and packaged." },
+                  { img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCQlDJCzW3AeHnxwlYwj-U1v5Bx-uV8yrrxvRgGGHrsO3eywM7kXy1BJxEXSHSnTfHsP36B3hOzPmG7OUkDUlLwBvoWS3nCvW9JEBhX6UTs6VbIIngxtWdWfpoFI3VLHMHn0XV8qBKqSztJOnazCf4SUjVwYwKGfrnsW5eChZGu0WD5wnsOGTLBZz2xj0cqsQqaPsgCFbb9R9nxDBmYHIH4Fw29IssJL4dmSUJB2kMX2KJe2ALOBlXm8JOB_1Jrljpx1WGVtRHBdnyA", title: "Wireless Charging Pad", desc: "Power up devices with a sleek, branded charging pad." },
+                  { img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCdRtEh9HQwxUuqTX2jM1IbOzA3R7ancingqNhfPWXLKuDBqgK6tweZ0LlRmZ-SHNMHl05_IzzVWiUxJSCsPuQtNk9grvyKiA0TXvqBjWEVvZvAz5-8xuIkKV_IPml4ooBesKSwrszDW3mSn7kL22m9aE3DgENxM8PEiM9XZ5f1x5yJfA2YDEqkTHMEe_UXGKL-f2n-WjnXUBsMctn9wda3Jbk6iPKwkyKCwYOcd6neRxEcP9Yv2LRdLS5AwgL17c86lq_sT9XURuWc", title: "Ceramic Coffee Mug", desc: "A classic promotional item, perfect for the office." }
+                ].map((product, index) => (
+                  <div key={index} className="flex w-full md:w-1/2 lg:w-1/3 flex-shrink-0 flex-col gap-4 rounded-xl border border-white/10 bg-surface-dark p-4 transition-all duration-300 hover:border-accent-gold/30 hover:shadow-lg scroll-snap-align-start">
+                    <div className="aspect-[4/3] w-full overflow-hidden rounded-lg">
+                      <img alt={product.title} className="h-full w-full object-cover" src={product.img}/>
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      <h3 className="text-white text-base font-bold leading-tight">{product.title}</h3>
+                      <p className="text-white/60 text-sm font-normal leading-normal">{product.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-6 flex justify-center">
+              <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-background-dark text-base font-bold leading-normal tracking-[0.015em] transition-transform duration-200 hover:scale-105">
+                <span className="truncate">View More Products</span>
+              </button>
+            </div>
+          </div>
+
+          {/* Trusted By Section */}
+          <div className="flex flex-col items-center gap-6 py-10">
+            <h2 className="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3">Trusted By</h2>
+            <div className="flex w-full items-center justify-around gap-8 px-4 opacity-40 invert">
+              {["Google", "Microsoft", "Amazon", "Meta", "Netflix"].map((company, index) => (
+                <img key={index} alt={`${company} logo`} className="h-8 w-auto object-contain" src={`/${company.toLowerCase()}-logo.png`}/>
+              ))}
+            </div>
+          </div>
+
+          {/* Testimonials */}
+          <div className="flex flex-col gap-8 py-10">
+            <h2 className="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 text-center">What Our Clients Say</h2>
+            <div className="relative w-full">
+              <div className="flex gap-8 overflow-x-auto px-4 pb-4">
+                {[
+                  { text: "The quality of the products is outstanding, and the customer service is second to none. We've received so many compliments on our new branded merchandise.", name: "Jane Doe", position: "Marketing Director, Acme Corp", avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuA1ItPJytQ7VL2CnfX9So1aKcyYPC2ntwmjkaIHvu8dtl--9Eh3su39dXhORakLw-pt93UfGUuvWbYWNSzpw-U4cKigvUiTupz7FIxAPDa9nuwbxGotDF3ED7UizpmYqbwR2Vsz34oB502vnw_OLgHvlHYKfVQuAIGsf705Bm2TvAl3QnkbLy_rNL1TiYwSrilsrw5h7snna4mSssN-MeFWSYjcDfF3d4no_0SueItjrfPNH30zjYrXUm4oBaVdbbPAQ_JDEauMH59Q" },
+                  { text: "BrandGifts made the process of ordering custom swag seamless. Their team was responsive, and the turnaround time was impressively fast. Highly recommended!", name: "John Smith", position: "CEO, InnoTech", avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuA3ye2QdVaemA_fYYp5luPQ5QN7R1yDbmWgMN4cD6KxKo3tnY5CLpZfdNjgpKGv5pFvOS4SottiWEYcURCM02lE-26JauuOgIy9Ahfx5IPXKjP5N9W138GRP8gCzNxdp7h9UatklXpmc1tF6fmkuHuk-iDz2KSHhBLxakJj1B8QwURpjmhTxdqam8H8QFsGQDUSyoVZvXMnhNQiDfN2OyXrdywWnQfCVe6J5PCzFh7BDRCtRz5SkuHKmF1i2hjj4v9WUEfuCxBzyHF4" }
+                ].map((testimonial, index) => (
+                  <div key={index} className="flex w-full md:w-1/2 flex-shrink-0 flex-col gap-4 rounded-xl border border-white/10 bg-surface-dark p-6 shadow-md">
+                    <p className="text-white/80">{testimonial.text}</p>
+                    <div className="flex items-center gap-4">
+                      <img alt={`Avatar of ${testimonial.name}`} className="h-12 w-12 rounded-full object-cover" src={testimonial.avatar}/>
+                      <div>
+                        <p className="font-bold text-accent-gold">{testimonial.name}</p>
+                        <p className="text-sm text-white/60">{testimonial.position}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="bg-primary/10 rounded-xl my-10 p-10 text-center flex flex-col items-center gap-4">
+            <h2 className="text-2xl font-bold text-white">Ready to elevate your brand?</h2>
+            <p className="text-white/80 max-w-lg">Let's create something memorable together. Contact us today to get started on your custom branded gifts.</p>
+            <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-background-dark text-base font-bold leading-normal tracking-[0.015em] mt-2 transition-transform duration-200 hover:scale-105">
+              <span className="truncate">Get Started</span>
+            </button>
+          </div>
+        </main>
+
+        {/* Footer */}
+        <footer className="border-t border-white/10 px-10 py-8 mt-10">
+          <div className="flex justify-between items-center">
+            <div className="flex items-center gap-4 text-accent-gold">
+              <div className="w-6 h-6">
+                <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z" stroke="#FFD700" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"/>
+                  <path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z" fill="#FFD700" fillOpacity="0.2"/>
+                </svg>
+              </div>
+              <h2 className="text-white text-lg font-bold">BrandGifts</h2>
+            </div>
+            <div className="flex gap-4">
+              <a className="text-white/60 hover:text-accent-gold" href="#">Facebook</a>
+              <a className="text-white/60 hover:text-accent-gold" href="#">Twitter</a>
+              <a className="text-white/60 hover:text-accent-gold" href="#">Instagram</a>
+            </div>
+          </div>
+          <div className="mt-8 text-center text-sm text-white/60">
+            © 2023 BrandGifts. All Rights Reserved.
+          </div>
+        </footer>
+      </div>
+    </div>
+  );
+};
+
+export default BrandGifts;

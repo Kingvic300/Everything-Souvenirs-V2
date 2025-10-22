@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+/* Ensure dark mode works */
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+    }
+}
